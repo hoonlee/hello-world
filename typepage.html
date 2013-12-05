@@ -1,0 +1,34 @@
+<!DOTYPE html>
+<html>
+	<head>
+		<title>Today's diary</title>
+	</head>
+	<body>
+			<form id="frm1">
+				<input type="text" id="diary">
+				<p>Type your dairy.</p>
+				<input type="button" onclick="myFunction1()" value="ok">
+			</form>
+			<ol id='list'>
+			Past diary
+
+			</ol>
+
+			<script type="text/javascript">
+				function myFunction1() {
+					var diaryVar = document.getElementById("diary")
+                    var inputText = document.createTextNode(diaryVar.value)
+				
+				
+					var ip = document.createElement("li")
+				    	ip.appendChild(inputText)
+                        
+                    var list = document.getElementById('list')
+                        list.appendChild(ip)
+
+					}
+				
+			</script>
+
+	</body>
+</html>
